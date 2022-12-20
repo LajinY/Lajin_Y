@@ -58,28 +58,32 @@ class StudentService {
 
     const studentRepo = dbConnection.getRepository(Student);
 
-    if (id) {
-      const data = await studentRepo.update({ id }, newInput);
-      return data;
+    const student = await studentRepo.findOne({ where: { id: id } });
+
+    if (!student) {
+      throw new Error("no student found thid id");
     }
+    const data = await studentRepo.update(student, newInput);
+
+    student.age=newInput.age;
+    student.firstName=newInput.firstName;
+    student.lastName=newInput.lastName;
+    return student;
   };
 
   public deleteStudent = async (
-    id: number,
-    deleteInput: {
-      firstName: string;
-      lastName: string;
-      age: number;
-    }
+    id: number
   ) => {
     const dbConnection = await this.dbConn;
 
     const studentRepo = dbConnection.getRepository(Student);
+    const student = await studentRepo.findOne({ where: { id: id } });
 
-    if (id) {
-      const data = await studentRepo.delete({ id });
-      return data;
+    if (!student) {
+      throw new Error("no student found thid id");
     }
+    const data = await studentRepo.delete(student);
+    return data;
   };
 }
 

@@ -32,10 +32,9 @@ const resolvers = {
       _parent: unknown,
       args: {
         id: number;
-        deleteInput: { firstName: string; lastName: string; age: number };
       }
     ) => {
-      return new StudentService().deleteStudent(args.id, args.deleteInput);
+      return new StudentService().deleteStudent(args.id);
     },
   },
 };

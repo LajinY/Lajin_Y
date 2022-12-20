@@ -28,7 +28,7 @@ type Query {
 type Mutation{
   createStudent(input:StudentInput):Student
   updateStudent(id:ID,newInput:updateStud):Student
-  deleteStudent(id:ID,deleteInput:StudentInput):Student
+  deleteStudent(id:ID):Student
 }
 
 
