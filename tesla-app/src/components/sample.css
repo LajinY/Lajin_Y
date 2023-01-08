@@ -1,0 +1,18 @@
+.image {
+  max-width: 10%;
+  max-height: 25%;
+}
+
+.paragraph {
+  justify-content: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+.p {
+  padding: 0 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  left: 10%;
+  margin-right: 10px;
+}
