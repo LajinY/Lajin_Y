@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  /* background-color: rgb(50, 48, 48); */
+  /* color: red; */
+  margin-left: 5px;
+}
+.App {
+  background: #111;
+}

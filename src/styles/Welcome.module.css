@@ -1,0 +1,15 @@
+.welcomeTitle {
+  padding: 3em 1.5em;
+  height: 100vh;
+  background-color: antiquewhite;
+}
+.welcomeTitle p {
+  font-size: 20px;
+}
+button {
+  color: aliceblue;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 8px;
+}
