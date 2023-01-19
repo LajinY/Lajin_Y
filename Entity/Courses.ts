@@ -4,6 +4,8 @@ import {
   Entity,
   JoinTable,
   ManyToMany,
+  JoinColumn,
+  OneToOne,
 } from "typeorm";
 import { Students } from "./Students";
 
@@ -21,4 +23,8 @@ export class Courses {
   })
   @JoinTable()
   udemy: Students[];
+
+  @OneToOne(() => Students, (student) => student.course)
+  @JoinColumn()
+  student: Students;
 }

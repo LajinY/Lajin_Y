@@ -11,7 +11,7 @@ const startServer = async () => {
   });
 
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 3000 },
+    listen: { port: 3030 },
   });
   console.log(`sevrer Connected at :${url}`);
   AppDataSource.initialize()

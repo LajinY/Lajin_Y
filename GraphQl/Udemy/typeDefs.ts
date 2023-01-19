@@ -8,7 +8,7 @@ type Students{
 type Courses{
     id:ID
     course:String
-    student:[Students]
+    student:Students
 }
 
 input studentInput{
@@ -21,7 +21,8 @@ input courseInput{
 }
 
 type Query{
-    getStudent(id:ID):Students!
+    getStudent(id:ID):Courses!
+    getStudents:[Courses]
 }
 
 type Mutation{
